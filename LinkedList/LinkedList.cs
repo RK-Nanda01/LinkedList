@@ -5,7 +5,7 @@ namespace LinkedList
 	{
 		internal Node head;
 
-        public void Add(int data)
+        public void Append(int data)
 		{
 			Node node = new Node(data);
 			if(this.head == null)	// No Elements in Linked List
@@ -43,7 +43,7 @@ namespace LinkedList
             Console.WriteLine($"New Node Added At the start of the list {data}");
 
         }
-
+		
 		public void DisplayList()
 		{
 			Node temp = this.head;

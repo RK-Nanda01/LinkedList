@@ -5,9 +5,9 @@ class Program
     {
         Console.WriteLine("Welcome to Linked List Implementation");
         LinkedList myList = new LinkedList();
-        myList.AddFirst(70);
-        myList.AddFirst(30);
-        myList.AddFirst(56);
+        myList.Append(56);
+        myList.Append(30);
+        myList.Append(70);
         myList.DisplayList();
         Console.ReadLine();
     }
