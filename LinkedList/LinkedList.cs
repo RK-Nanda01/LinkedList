@@ -100,6 +100,26 @@ namespace LinkedList
 
 			}
 		}
+		public void PopLast()
+		{
+			if(this.head == null)
+			{
+                Console.WriteLine("Linked List Already Empty");
+            }
+			else
+			{
+				Node temp = head;
+				Node prev = temp;
+				while(temp.next!=null)
+				{
+					prev = temp;
+					temp = temp.next;
+
+				}
+				prev.next = null;
+
+			}
+		}
 		
 		public void DisplayList()
 		{

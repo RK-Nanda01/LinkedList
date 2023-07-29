@@ -10,7 +10,7 @@ class Program
         myList.Append(70);
         Console.WriteLine("Before popping");
         myList.DisplayList();
-        myList.Pop();
+        myList.PopLast();
         Console.Write("\n");
         Console.WriteLine("After popping");
         myList.DisplayList();
