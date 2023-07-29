@@ -88,6 +88,18 @@ namespace LinkedList
 				return;
 			}
 		}
+		public void Pop()
+		{
+			if(this.head == null)
+			{
+				Console.WriteLine("Linked List Already Empty");
+			}
+			else
+			{
+				head = head.next;
+
+			}
+		}
 		
 		public void DisplayList()
 		{
