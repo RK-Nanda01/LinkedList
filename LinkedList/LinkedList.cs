@@ -43,6 +43,51 @@ namespace LinkedList
             Console.WriteLine($"New Node Added At the start of the list {data}");
 
         }
+
+		public void InsertAtPosition(int position, int data)
+		{
+			if(position <1)
+			{
+				Console.WriteLine("Invalid Position");
+			}
+			Node node = new Node(data);
+			if(position == 1)
+			{
+				if(this.head == null)
+				{
+					head = node;
+				}
+
+				else
+				{
+					node.next = head;
+					head = node;
+				}
+			}
+
+			else
+			{
+				int currPosition = 1;
+				Node temp = head;
+				Node prev= null;
+				while(temp!=null)
+				{
+					if(currPosition == position)
+					{
+						prev.next = node;
+						node.next = temp;
+						return;
+					}
+
+					currPosition++;
+					prev = temp;
+					temp = temp.next;
+
+				}
+				Console.WriteLine("Out Of range");
+				return;
+			}
+		}
 		
 		public void DisplayList()
 		{
