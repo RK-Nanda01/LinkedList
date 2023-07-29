@@ -27,6 +27,22 @@ namespace LinkedList
 			Console.WriteLine($"New Node Added At the end of the list {data}");
 
 		}
+		public void AddFirst(int data)
+		{
+            Node node = new Node(data);
+            if (this.head == null)  // No Elements in Linked List
+            {
+                this.head = node;
+
+            }
+			else
+			{
+				node.next = head;
+				head = node;
+			}
+            Console.WriteLine($"New Node Added At the start of the list {data}");
+
+        }
 
 		public void DisplayList()
 		{
